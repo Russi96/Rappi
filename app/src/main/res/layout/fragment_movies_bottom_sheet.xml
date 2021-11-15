@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.MaterialComponents.Light"
+    tools:context=".moviesmodule.view.fragment.movies.bottomsheet.MoviesBottomSheet">
+
+    <TextView
+        android:id="@+id/tvCategoriesMoviesBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_dimen_24"
+        android:layout_marginTop="@dimen/common_dimen_24"
+        android:text="@string/categories"
+        android:textColor="@color/black"
+        android:textSize="@dimen/common_size_18"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <HorizontalScrollView
+        android:id="@+id/scrollViewMoviesBottomSheet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCategoriesMoviesBottomSheet">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupMoviesBottomSheet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:checkedChip="@+id/main_course_chip"
+                app:selectionRequired="true"
+                app:singleLine="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    style="@style/CustomChipStyle"
+                    android:checked="true"
+                    android:id="@+id/popularMoviesBottomSheet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/popular" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/topRatedMoviesBottomSheet"
+                    style="@style/CustomChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/top_rated" />
+
+            </com.google.android.material.chip.ChipGroup>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btCategoriesMoviesBottomSheet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/orange_second"
+        android:text="@string/apply"
+        android:layout_marginTop="@dimen/common_dimen_24"
+        app:layout_constraintEnd_toEndOf="@+id/scrollViewMoviesBottomSheet"
+        app:layout_constraintStart_toStartOf="@+id/scrollViewMoviesBottomSheet"
+        app:layout_constraintTop_toBottomOf="@+id/scrollViewMoviesBottomSheet" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

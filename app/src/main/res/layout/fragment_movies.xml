@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clFragmentMovies"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.MaterialComponents.Light"
+    app:layoutDescription="@xml/fragment_movies_scene"
+    tools:context=".moviesmodule.view.fragment.movies.MoviesFragment">
+
+    <ImageView
+        android:id="@+id/ivBackgroundImageFragmentMovies"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/common_dimen_104"
+        android:layout_height="@dimen/common_dimen_104"
+        android:layout_marginTop="@dimen/common_dimen_default"
+        android:importantForAccessibility="no"
+        android:src="@drawable/rappi_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SearchView
+        android:id="@+id/svSearchMoviesFragmentMovie"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_dimen_16"
+        android:layout_marginTop="@dimen/common_dimen_16"
+        android:layout_marginEnd="@dimen/common_dimen_16"
+        android:background="@drawable/search_view_background"
+        android:iconifiedByDefault="false"
+        android:queryBackground="@android:color/transparent"
+        android:queryHint="@string/main_screen_browser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvListMoviesFragmentMovies"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/common_dimen_16"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/svSearchMoviesFragmentMovie"
+        app:layout_constraintStart_toStartOf="@+id/svSearchMoviesFragmentMovie"
+        app:layout_constraintTop_toBottomOf="@+id/svSearchMoviesFragmentMovie"
+        app:spanCount="2"
+        tools:listitem="@layout/item_movies" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/ltEmptyList"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/empty" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/movies_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:layout_marginEnd="@dimen/common_dimen_24"
+        android:layout_marginBottom="@dimen/common_dimen_24"
+        android:backgroundTint="@color/orange_second"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_category"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@android:color/white" />
+</androidx.constraintlayout.motion.widget.MotionLayout>

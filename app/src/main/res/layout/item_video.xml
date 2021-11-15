@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtubeVideoPlayerItemVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_dimen_16"
+        android:layout_marginTop="@dimen/common_dimen_default"
+        android:layout_marginEnd="@dimen/common_dimen_16"
+        android:layout_marginBottom="@dimen/common_dimen_16"
+        app:autoPlay="false"
+        app:handleNetworkEvents="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvNameItemVideo"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameItemVideo"
+        app:showFullScreenButton="true" />
+
+    <TextView
+        android:id="@+id/tvNameItemVideo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_dimen_16"
+        android:layout_marginTop="@dimen/common_dimen_16"
+        android:layout_marginEnd="@dimen/common_dimen_16"
+        android:gravity="center"
+        android:textColor="@color/orange_second"
+        android:textSize="@dimen/common_size_18"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Grandmaster and Topaz - Extended Scene" />
+</androidx.constraintlayout.widget.ConstraintLayout>

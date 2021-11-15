@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host_details"
+    app:startDestination="@id/detailsFragment">
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.rappitv.moviesmodule.view.fragment.details.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+        <argument android:name="movieFragmentId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_detailsFragment_to_videosMovieFragment"
+            app:destination="@id/videosMovieFragment" />
+        <action
+            android:id="@+id/action_detailsFragment_to_webPageFragment"
+            app:destination="@id/webPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videosMovieFragment"
+        android:name="com.example.rappitv.moviesmodule.view.fragment.videos.VideosMovieFragment"
+        android:label="fragment_videos_movie"
+        tools:layout="@layout/fragment_videos_movie" >
+        <argument
+            android:name="video"
+            app:argType="com.example.rappitv.domain.Video"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/webPageFragment"
+        android:name="com.example.rappitv.moviesmodule.view.fragment.web.WebPageFragment"
+        android:label="fragment_web_page"
+        tools:layout="@layout/fragment_web_page" >
+        <argument
+            android:name="webUrl"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>

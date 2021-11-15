@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:background="@android:color/white"
+    android:theme="@style/Theme.MaterialComponents.Light"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="5dp">
+
+    <ImageView
+        android:id="@+id/ivMoveImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        android:src="@drawable/rappi_background"
+        android:scaleType="centerCrop" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:layout_gravity="end">
+
+        <ProgressBar
+            android:id="@+id/ratingProgressbarItemMovies"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:indeterminate="false"
+            android:max="10"
+            android:progressDrawable="@drawable/circular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:progress="5" />
+
+        <TextView
+            android:id="@+id/tvRatingItemMovies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/common_size_16"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            tools:text="7.5"
+            app:layout_constraintBottom_toBottomOf="@+id/ratingProgressbarItemMovies"
+            app:layout_constraintEnd_toEndOf="@+id/ratingProgressbarItemMovies"
+            app:layout_constraintStart_toStartOf="@+id/ratingProgressbarItemMovies"
+            app:layout_constraintTop_toTopOf="@+id/ratingProgressbarItemMovies" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:background="@drawable/view_screen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+            <TextView
+                android:id="@+id/tvMoveName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                tools:text="Rappi Movie" />
+
+            <TextView
+                android:id="@+id/tvReleaseDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/orange_second"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="2020" />
+        </LinearLayout>
+    </FrameLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

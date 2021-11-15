@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.MaterialComponents.Light"
+    tools:context=".moviesmodule.view.fragment.details.DetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clLoadingFragmentDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:elevation="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/rappi_load" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtube_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:autoPlay="false"
+        app:handleNetworkEvents="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:showFullScreenButton="true" />
+
+    <TextView
+        android:id="@+id/tvNameMoveActivityDetails"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_dimen_default"
+        android:layout_marginTop="@dimen/common_dimen_16"
+        android:layout_marginEnd="@dimen/common_dimen_default"
+        android:textColor="@color/black"
+        android:textSize="@dimen/common_size_24"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/youtube_player_view"
+        tools:text="Thor" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/common_dimen_16"
+        android:layout_marginEnd="@dimen/common_dimen_default"
+        android:layout_marginBottom="@dimen/common_dimen_default"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvListItemsGendersFragmentDetails">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/release_date"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_size_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvReleaseDateMovieActivityDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_dimen_default"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_size_16"
+            tools:text="2017-10-25" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_dimen_default"
+            android:text="@string/original_language"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_size_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvOriginalLanguageMovieActivityDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_dimen_default"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_size_16"
+            tools:text="EN" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_dimen_default"
+            android:text="@string/runtime"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_size_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvRunTimeMovieActivityDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_dimen_default"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_size_16"
+            tools:text="131 min" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_dimen_default"
+            android:text="@string/status"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_size_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvStatusMovieActivityDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_dimen_default"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_size_16"
+            tools:text="Released" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_dimen_default"
+            android:text="@string/rating"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_size_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvRatingMovieActivityDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_dimen_default"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_size_16"
+            app:drawableLeftCompat="@drawable/ic_star_rate"
+            tools:text="7.5" />
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvListItemsGendersFragmentDetails"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_dimen_default"
+        android:layout_marginEnd="@dimen/common_dimen_default"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameMoveActivityDetails"
+        tools:listitem="@layout/item_genders" />
+
+    <TextView
+        android:id="@+id/tvDescriptionMovieFragmentDetails"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_dimen_16"
+        android:layout_marginEnd="@dimen/common_dimen_16"
+        android:ellipsize="end"
+        android:justificationMode="inter_word"
+        android:maxLines="5"
+        android:textColor="@color/black"
+        android:textSize="@dimen/common_size_14"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/tvNameMoveActivityDetails"
+        app:layout_constraintTop_toBottomOf="@+id/rvListItemsGendersFragmentDetails"
+        tools:ignore="UnusedAttribute" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btVideoFragmentDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_dimen_default"
+        android:layout_marginBottom="@dimen/common_dimen_default"
+        android:backgroundTint="@color/orange_second"
+        android:text="@string/videos"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_local_movies"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btPageFragmentDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_dimen_default"
+        android:backgroundTint="@color/orange_second"
+        android:text="@string/page"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_find_in_page"
+        app:layout_constraintBottom_toBottomOf="@+id/btVideoFragmentDetails"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="@+id/btVideoFragmentDetails" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

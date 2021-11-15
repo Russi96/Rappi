@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/moviesFragment">
+
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="com.example.rappitv.moviesmodule.view.fragment.movies.MoviesFragment"
+        android:label="Movies"
+        tools:layout="@layout/fragment_movies" >
+        <action
+            android:id="@+id/action_moviesFragment_to_moviesBottomSheet"
+            app:destination="@id/moviesBottomSheet" />
+        <argument
+            android:name="backFromBottomSheet"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/seriesTvFragment"
+        android:label="TV Series"
+        android:name="com.example.rappitv.seriesmodule.view.fragment.SeriesTvFragment"
+        tools:layout="@layout/fragment_series_tv" />
+    <dialog
+        android:id="@+id/moviesBottomSheet"
+        android:name="com.example.rappitv.moviesmodule.view.fragment.movies.bottomsheet.MoviesBottomSheet"
+        android:label="fragment_movies_bottom_sheet"
+        tools:layout="@layout/fragment_movies_bottom_sheet" >
+        <action
+            android:id="@+id/action_moviesBottomSheet_to_moviesFragment"
+            app:destination="@id/moviesFragment" />
+    </dialog>
+</navigation>

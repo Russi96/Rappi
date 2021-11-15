@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">RappiTV</string>
+    <string name="movies">movies</string>
+    <string name="series_tv">series TV</string>
+    <string name="main_screen_browser">Search Movies</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="release_date">Release Date</string>
+    <string name="original_language">Original Language</string>
+    <string name="runtime">Runtime</string>
+    <string name="status">Status</string>
+    <string name="rating">Rating</string>
+    <string name="videos">videos</string>
+    <string name="page">page</string>
+    <string name="categories">Categories</string>
+    <string name="popular">Popular</string>
+    <string name="top_rated">Top_Rated</string>
+    <string name="apply">Apply</string>
+    <string name="details">Details</string>
+    <string name="web">Web</string>
+</resources>
