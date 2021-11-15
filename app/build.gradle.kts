@@ -10,7 +10,17 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        getByName("debug") {
+            storeFile = file("D:\\Rappi\\RappiTv.jks")
+            storePassword = "V58DjNF&Cqdy"
+            keyPassword = "V58DjNF&Cqdy"
+            keyAlias = "Rappi_TV"
+        }
+    }
     compileSdk = Configs.compileSdk
+
+
 
     defaultConfig {
         applicationId = Configs.applicationId
