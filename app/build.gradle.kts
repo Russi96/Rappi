@@ -30,6 +30,7 @@ android {
         versionName = Configs.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
@@ -100,6 +101,7 @@ dependencies {
     kapt("com.google.dagger:dagger-compiler:2.39.1")
     implementation("com.google.dagger:hilt-android:2.39.1")
     kapt("com.google.dagger:hilt-compiler:2.39.1")
+
     // For instrumentation tests
     androidTestImplementation("com.google.dagger:hilt-android-testing:2.39.1")
     kaptAndroidTest("com.google.dagger:hilt-compiler:2.39.1")

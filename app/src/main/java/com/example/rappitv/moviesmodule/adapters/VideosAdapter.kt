@@ -18,6 +18,7 @@ class VideosAdapter : ListAdapter<Result, VideosAdapter.MyViewHolder>(DiffUtilCa
     private lateinit var mContext: Context
 
 
+
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val mBinding = ItemVideoBinding.bind(itemView)
     }
