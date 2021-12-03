@@ -10,6 +10,7 @@ plugins {
 }
 
 android {
+    /*
     signingConfigs {
         getByName("debug") {
             storeFile = file("D:\\Rappi\\RappiTv.jks")
@@ -18,6 +19,10 @@ android {
             keyAlias = "Rappi_TV"
         }
     }
+    
+     */
+
+
     compileSdk = Configs.compileSdk
 
 
