@@ -9,6 +9,21 @@ un filtro en la seccion de peliculas por popularidad o mejor calificada, adicion
 
 <a href="https://www.themoviedb.org/documentation/api">API THE MOVIE DB</a>
 
+# Instrucciones de Compilación
+
+Instalar JDK 11 se puede descargar del siguiente link = <a href="https://jdk.java.net/java-se-ri/1">JDK 11</a>
+
+Pasos para la instalacion del JDK en Android Studio
+
+1. File
+2. Proyect Structure 
+3. SDK Location 
+4. JDK Location poner la ruta del JDK 11
+
+![Captura de pantalla 2021-12-02 203944](https://user-images.githubusercontent.com/61768939/144530137-9547a8d2-e1fa-42b5-89dc-d0c221a5dae4.png)
+
+
+Version Gradle 4.1.0
 
 ## Arquitectura 🚀
 <p>
